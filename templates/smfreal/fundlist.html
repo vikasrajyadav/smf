@@ -9,6 +9,7 @@
   <table>
       <img id="imgfile" src="{% static "images/axismutualfund_mf.jpg" %}" alt="">
       <thead>
+        <th>Fund no.</th>
       <th>Company name</th>
       <th>fund type</th>
       <th>fund name</th>
@@ -18,6 +19,7 @@
     {% for list in fundl %}
     {% if list.fundcompany == 'axis' or list.fundcompany == 'Axis' %}
     <tr>
+      <td>{{list.fundno}}</td>
       <td>{{list.fundcompany}}</td>
       <td>{{list.fundtype}}</td>
       <td>{{list.fundname}}</td>
@@ -39,10 +41,12 @@
       <td></td>
       <td></td>
       <td></td>
+      <td></td>
     </tr>
     {% for list in fundl %}
     {% if list.fundcompany == 'Motilal Oswal' %}
     <tr>
+      <td>{{list.fundno}}</td>
       <td>{{list.fundcompany}}</td>
       <td>{{list.fundtype}}</td>
       <td>{{list.fundname}}</td>
@@ -53,7 +57,41 @@
     {% endfor %}
   </table>
 </div>
+<div class="">
+  <br>
+  <img id="imgfile" src="{% static "images/SBIMutualFund_MF.jpg" %}" alt="">
+  <table>
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+    {% for list in fundl %}
+    {% if list.fundcompany == 'SBI' %}
+    <tr>
+      <td>{{list.fundno}}</td>
+      <td>{{list.fundcompany}}</td>
+      <td>{{list.fundtype}}</td>
+      <td>{{list.fundname}}</td>
+      <td>{{list.fundlaunchdate}}</td>
+      <td>{{list.fundreturn}}</td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+    <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
 
+  </table>
+</div>
 
 {% else %}
 

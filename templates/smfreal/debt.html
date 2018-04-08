@@ -3,5 +3,34 @@
 {% extends "smfreal/navigation.html" %}
 {% load staticfiles %}
 {% block body_block %}
+<h3>List of empanelled AMCs and mutual funds</h3>
+{%if fundl %}
+<div class="">
+  <table>
+      <thead>
+      <th>Company name</th>
+      <th>fund type</th>
+      <th>fund name</th>
+      <th>launch date</th>
+      <th>CAGR</th>
+    </thead>
+    {% for list in fundl %}
+    {% if list.fundtype == 'equity' or list.fundtype == 'Debt' %}
+    <tr>
+      <td>{{list.fundcompany}}</td>
+      <td>{{list.fundtype}}</td>
+      <td>{{list.fundname}}</td>
+      <td>{{list.fundlaunchdate}}</td>
+      <td>{{list.fundreturn}}</td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+  </table>
+</div>
 
+{% else %}
+
+<p>No website found!</p>
+
+{% endif %}
 {% endblock %}
