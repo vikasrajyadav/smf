@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+{% extends "smfreal/navigation.html" %}
+{% load staticfiles %}
+{% block body_block %}
+  <div class="caption center-align "><h3 class="center" id="brand">Select fund type</h3></div>
+  <div class="carousel container ">
+      <a class="carousel-item waves-circle" href="/equity"><img src="{% static "images/equity.png"%}"><div class="caption center-align">
+    <h3>Equity</h3> </div></a>
+      <a class="carousel-item waves-circle" href="/debt"><img src="{% static "images/debt.png"%}"><div class="caption center-align">
+    <h3>Debt</h3> </div></a>
+      <a class="carousel-item waves-circle" href="/hybrid"><img src="{% static "images/hybrid.png"%}"><div class="caption center-align">
+    <h3>Hybrid</h3> </div></a>
+    </div>
+
+{% endblock %}

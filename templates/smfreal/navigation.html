@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>SMF</title>
+    <link rel="stylesheet" href="{% static "css/materialize.css"%}">
+    <link rel="stylesheet" href="{% static "css/mystyle.css"%}">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="{%static "images/logo1.png"%}" type="image/png" sizes="16x16">
+
+  </head>
+  <body>
+
+      <nav>
+        <div class="container">
+
+        </div>
+        <div class="nav-wrapper white lighten-4 row">
+        <div class="col">
+          <a href="/" class="brand-logo bold" id="brand"><img src="{%static "images/logo1.png"%}" alt="" width="25px" height="25px"> Stock Mutual Fund</a>
+
+        </div>
+          <div class="black-text">
+            <ul id="nav-mobile" class="right hide-on-med-and-down">
+              <li><a href="/fundlist" class=" waves-effect waves-teal" id="brand">Explore All Funds List</a></li>
+              <li><a href="#" id="brand">Login</a></li>
+              <li><a href="/registration" id="brand">Registration</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <div class="container">
+        {% block body_block %}
+
+
+
+        {% endblock %}
+      </div>
+      <script
+    src="https://code.jquery.com/jquery-3.3.1.min.js"
+    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+    crossorigin="anonymous"></script>
+      <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script> -->
+      <script src="{%static "javascript/materialize.min.js"%}"></script>
+      <script>
+      $(document).ready(function(){
+        $('.carousel').carousel();
+      });
+      </script>
+  </body>
+</html>

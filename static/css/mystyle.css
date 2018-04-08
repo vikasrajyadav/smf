@@ -1,0 +1,25 @@
+/* #nav-mobile{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+} */
+#brand{
+color: #88b4ba;
+}
+.text-color-custom{
+
+}
+
+#img{
+  display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+#calculator{
+  background-color: black;
+  height: 200px;
+  width: 100px;
+
+}
