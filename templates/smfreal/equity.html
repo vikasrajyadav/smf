@@ -7,17 +7,19 @@
 {%if fundl %}
 <div class="">
   <table>
-      <thead>
-      <th>Company name</th>
-      <th>fund type</th>
-      <th>fund name</th>
-      <th>launch date</th>
-      <th>CAGR</th>
+    <thead>
+        <th>Fund no.</th>
+        <th>Company name</th>
+        <th>fund type</th>
+        <th>fund name</th>
+        <th>launch date</th>
+        <th>CAGR</th>
     </thead>
     {% for list in fundl %}
     {% if list.fundtype == 'equity' or list.fundtype == 'Equity' %}
     <tr>
-      <td>{{list.fundcompany}}</td>
+      <td>{{list.fundno}}</td>
+      <td>{{list.fundcompany}}</td></a>
       <td>{{list.fundtype}}</td>
       <td>{{list.fundname}}</td>
       <td>{{list.fundlaunchdate}}</td>

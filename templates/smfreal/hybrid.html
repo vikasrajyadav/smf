@@ -8,6 +8,7 @@
 <div class="">
   <table>
       <thead>
+      <th>Fund no.</th>
       <th>Company name</th>
       <th>fund type</th>
       <th>fund name</th>
@@ -17,6 +18,7 @@
     {% for list in fundl %}
     {% if list.fundtype == 'equity' or list.fundtype == 'Hybrid' %}
     <tr>
+    <td>{{list.fundno}}</td>
       <td>{{list.fundcompany}}</td>
       <td>{{list.fundtype}}</td>
       <td>{{list.fundname}}</td>
