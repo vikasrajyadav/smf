@@ -23,5 +23,8 @@ urlpatterns = [
     path('comment/(?P<pk>\d+)/approve/', views.comment_approve, name='comment_approve'),
     path('comment/(?P<pk>\d+)/remove/', views.comment_remove, name='comment_remove'),
     path('list/',views.listf,name='listfund'),
+    path('recommend/',views.recoma,name='recom'),
+    # path('buy/(?P<pk>[0-9]+)/',views.buy,name='buy'),
+    path('buy/',views.buy,name='buy1'),
 
 ]

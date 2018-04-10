@@ -99,8 +99,16 @@ def listf(request):
     return render(request,'smfreal/list.html',context=fundd)
 
 
+def recoma(request):
+    funddetail = fundlist.objects.order_by('fundno')
+    fundd = {'fundl': funddetail }
+    return render(request,'smfreal/recommendation.html',context=fundd)
+
+
 def index(request):
-    return render(request,'smfreal/index.html')
+    funddetail = fundlist.objects.order_by('fundno')
+    fundd = {'fundl': funddetail }
+    return render(request,'smfreal/index.html',context=fundd)
 
 
 def user_page(request):
@@ -159,3 +167,9 @@ def hybrid(request):
     funddetail = fundlist.objects.order_by('fundno')
     fundd = {'fundl': funddetail }
     return render(request,'smfreal/hybrid.html',context=fundd)
+
+
+def buy(request,pk='default'):
+    funddetail = fundlist.objects.order_by('pk')
+    fundd = {'fundl':funddetail}
+    return render(request,'smfreal/buy.html',context=fundd)

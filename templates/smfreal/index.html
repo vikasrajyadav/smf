@@ -13,4 +13,132 @@
     <h3>Hybrid</h3> </div></a>
     </div>
 
+<br><br><br><br><br>
+
+<h2 class="center">Our Recommendation</h2>
+
+<div class="">
+  <h3>Top performing mutual Funds</h3>
+
+  <div class="center container" id="loader">
+    <br>
+    <div class="preloader-wrapper big active">
+       <div class="spinner-layer spinner-green-only">
+         <div class="circle-clipper left">
+           <div class="circle"></div>
+         </div><div class="gap-patch">
+           <div class="circle"></div>
+         </div><div class="circle-clipper right">
+           <div class="circle"></div>
+         </div>
+       </div>
+     </div>
+  </div>
+
+
+  {%if fundl %}
+  <div class="row">
+  {% for list in fundl %}
+  {% if list.fundrating >= '3' %}
+   <div class="col s3 m6">
+     <div class="card white darken-1 z-depth-3">
+       <div class="card-content teal-text">
+         <span class="card-title">{{list.fundcompany}}</span>
+         <p>{{list.fundname}}</p>
+         <span>Lauch date: {{list.fundlaunchdate}}</span>
+
+         <p>Rating: {{list.fundrating}}/5</p>
+         <i>Minimum SIP: {{list.fundminimumSIP}}</i>
+       </div>
+       <div class="center">
+         <i id="brand">Return 1st: {{list.fundreturn_1}}%,</i>
+       <i id="brand">Return 2nd: {{list.fundreturn_2}}%,</i>
+       <i id="brand">Return 3rd: {{list.fundreturn_3}}%,</i>
+       <i id="brand">Return 5th: {{list.fundreturn_5}}</i>
+       <p> <button type="button" class="waves-effect waves-light btn" name="button">View Detail to buy</button> </p>
+       </div> <br>
+     </div>
+   </div>
+     {% endif %}
+
+  {% endfor %}
+  </div>
+
+
+</div>
+{%endif%}
+
+<h3>Top performing fund</h3>
+  {%if fundl %}
+  <div class="row">
+  {% for list in fundl %}
+  {% if list.fundreturn_1 >= '10' %}
+   <div class="col s3 m6">
+     <div class="card white darken-1 z-depth-3">
+       <div class="card-content teal-text">
+         <span class="card-title">{{list.fundfundcompany}}</span>
+         <p>{{list.fundname}}</p>
+         <span>Lauch date: {{list.fundlaunchdate}}</span>
+
+         <p>Rating: {{list.fundrating}}/5</p>
+         <i>Minimum SIP: {{list.fundminimumSIP}}</i>
+       </div>
+       <div class="center">
+         <i id="brand">Return 1st: {{list.fundreturn_1}}%,</i>
+       <i id="brand">Return 2nd: {{list.fundreturn_2}}%,</i>
+       <i id="brand">Return 3rd: {{list.fundreturn_3}}%,</i>
+       <i id="brand">Return 5th: {{list.fundreturn_5}}</i>
+       <p> <button type="button" class="waves-effect waves-light btn" name="button">View Detail to buy</button> </p>
+       </div> <br>
+     </div>
+   </div>
+     {% endif %}
+
+  {% endfor %}
+
+
+
+
+  </div>
+  {%endif%}
+
+  <h3>Low risk funds</h3>
+    {%if fundl %}
+    <div class="row">
+    {% for list in fundl %}
+    {% if list.fundrisk <= '3' %}
+     <div class="col s3 m6">
+       <div class="card white darken-1 z-depth-3">
+         <div class="card-content teal-text">
+           <span class="card-title">{{list.fundfundcompany}}</span>
+           <p>{{list.fundname}}</p>
+           <span>Lauch date: {{list.fundlaunchdate}}</span>
+
+           <p>Rating: {{list.fundrating}}/5</p>
+            <p>Risk: {{list.fundrisk}}/5</p>
+           <i>Minimum SIP: {{list.fundminimumSIP}}</i>
+         </div>
+         <div class="center">
+           <i id="brand">Return 1st: {{list.fundreturn_1}}%,</i>
+         <i id="brand">Return 2nd: {{list.fundreturn_2}}%,</i>
+         <i id="brand">Return 3rd: {{list.fundreturn_3}}%,</i>
+         <i id="brand">Return 5th: {{list.fundreturn_5}}</i>
+         <p> <button type="button" class="waves-effect waves-light btn" name="button">View Detail to buy</button> </p>
+         </div> <br>
+       </div>
+     </div>
+       {% endif %}
+
+    {% endfor %}
+    </div>
+
+
+  </div>
+  {%endif%}
+
+
+  </div>
+
+
+
 {% endblock %}
