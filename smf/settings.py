@@ -130,3 +130,4 @@ MEDIA_ROOT = MEDIA_DIR
 MEDIA_URL = '/media/'
 
 LOGIN_URL = '/smfreal/user_login'
+LOGIN_REDIRECT_URL = '/'

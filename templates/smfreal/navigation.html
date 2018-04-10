@@ -24,8 +24,16 @@
           <div class="black-text">
             <ul id="nav-mobile" class="right hide-on-med-and-down">
               <li><a href="/fundlist" class=" waves-effect waves-teal" id="brand">Explore All Funds List</a></li>
-              <li><a href="#" id="brand">Login</a></li>
-              <li><a href="/registration" id="brand">Registration</a></li>
+              {% if user.is_authenticated %}
+              <li>
+                <a id="brand" >Welcome: {{ user.username }}</a>
+              </li>
+              <li>
+                <a id="brand" href="{% url 'logout' %}" >Log out</a>
+              </li>
+              {% else %}
+              <li><a href="{% url 'login' %}" id="brand">Login</a></li>
+              {% endif %}
             </ul>
           </div>
         </div>
@@ -47,6 +55,9 @@
       <script>
       $(document).ready(function(){
         $('.carousel').carousel();
+        window.onload = function () {
+$('#loader').fadeOut(2000, function(){ $('#loader').remove(); } );
+}
       });
       </script>
   </body>

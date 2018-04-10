@@ -8,22 +8,28 @@
 <div class="">
   <table>
       <thead>
-      <th>Fund no.</th>
+        <th>Fund no.</th>
       <th>Company name</th>
       <th>fund type</th>
       <th>fund name</th>
       <th>launch date</th>
-      <th>CAGR</th>
+      <th>CAGR 1 year</th>
+      <th>CAGR 2 years</th>
+      <th>CAGR 3 years</th>
+      <th>CAGR 5 years</th>
     </thead>
     {% for list in fundl %}
     {% if list.fundtype == 'equity' or list.fundtype == 'Hybrid' %}
     <tr>
-    <td>{{list.fundno}}</td>
+      <td>{{list.fundno}}</td>
       <td>{{list.fundcompany}}</td>
       <td>{{list.fundtype}}</td>
       <td>{{list.fundname}}</td>
       <td>{{list.fundlaunchdate}}</td>
-      <td>{{list.fundreturn}}</td>
+      <td>{{list.fundreturn_1}}</td>
+      <td>{{list.fundreturn_2}}</td>
+      <td>{{list.fundreturn_3}}</td>
+      <td>{{list.fundreturn_5}}</td>
     </tr>
     {% endif %}
     {% endfor %}

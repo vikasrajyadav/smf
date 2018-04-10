@@ -14,7 +14,10 @@
       <th>fund type</th>
       <th>fund name</th>
       <th>launch date</th>
-      <th>CAGR</th>
+      <th>CAGR 1 year</th>
+      <th>CAGR 2 years</th>
+      <th>CAGR 3 years</th>
+      <th>CAGR 5 years</th>
     </thead>
     {% for list in fundl %}
     {% if list.fundcompany == 'axis' or list.fundcompany == 'Axis' %}
@@ -24,7 +27,10 @@
       <td>{{list.fundtype}}</td>
       <td>{{list.fundname}}</td>
       <td>{{list.fundlaunchdate}}</td>
-      <td>{{list.fundreturn}}</td>
+      <td>{{list.fundreturn_1}}</td>
+      <td>{{list.fundreturn_2}}</td>
+      <td>{{list.fundreturn_3}}</td>
+      <td>{{list.fundreturn_5}}</td>
     </tr>
     {% endif %}
     {% endfor %}
@@ -42,6 +48,9 @@
       <td></td>
       <td></td>
       <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
     {% for list in fundl %}
     {% if list.fundcompany == 'Motilal Oswal' %}
@@ -51,7 +60,10 @@
       <td>{{list.fundtype}}</td>
       <td>{{list.fundname}}</td>
       <td>{{list.fundlaunchdate}}</td>
-      <td>{{list.fundreturn}}</td>
+      <td>{{list.fundreturn_1}}</td>
+      <td>{{list.fundreturn_2}}</td>
+      <td>{{list.fundreturn_3}}</td>
+      <td>{{list.fundreturn_5}}</td>
     </tr>
     {% endif %}
     {% endfor %}
@@ -68,6 +80,9 @@
       <td></td>
       <td></td>
       <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
     </tr>
     {% for list in fundl %}
     {% if list.fundcompany == 'SBI' %}
@@ -77,11 +92,17 @@
       <td>{{list.fundtype}}</td>
       <td>{{list.fundname}}</td>
       <td>{{list.fundlaunchdate}}</td>
-      <td>{{list.fundreturn}}</td>
+      <td>{{list.fundreturn_1}}</td>
+      <td>{{list.fundreturn_2}}</td>
+      <td>{{list.fundreturn_3}}</td>
+      <td>{{list.fundreturn_5}}</td>
     </tr>
     {% endif %}
     {% endfor %}
     <tr>
+      <td></td>
+      <td></td>
+      <td></td>
       <td></td>
       <td></td>
       <td></td>
